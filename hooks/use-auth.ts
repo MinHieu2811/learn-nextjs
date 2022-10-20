@@ -3,13 +3,23 @@ import { PublicConfiguration } from "swr/dist/types";
 import { authApi } from "@/api/index";
 
 const MS_PER_HOUR = 60 * 60 * 1000
-export function useAuth(options?: Partial<PublicConfiguration>) {
+
+type AuthProps = {
+    profile: any,
+    error: any
+    login: () => void,
+    logout: () => void,
+    firstLoading: boolean
+}
+export function useAuth(options?: Partial<PublicConfiguration>): AuthProps {
     //profile
     const { data: profile, error, mutate } = useSWR('/profile', {
         dedupingInterval: MS_PER_HOUR,
         revalidateOnFocus: false,
         ...options
     })
+
+    const firstLoading = profile === undefined && error === undefined
 
     async function login() {
         await authApi.login({
@@ -32,6 +42,7 @@ export function useAuth(options?: Partial<PublicConfiguration>) {
         profile,
         error,
         login,
-        logout
+        logout,
+        firstLoading
     }
 }

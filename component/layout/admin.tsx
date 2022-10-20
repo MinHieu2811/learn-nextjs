@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { LayoutProps } from '@/models/index';
 import Link from 'next/link';
+import { Auth } from '@/component/common'
 
 export function AdminLayout ({ children}: LayoutProps) {
   return (
-    <div>
+    <Auth>
       <h1>
         Admin Layout
       </h1>
@@ -21,6 +22,6 @@ export function AdminLayout ({ children}: LayoutProps) {
         <>
             {children}
         </>
-    </div>
+    </Auth>
   );
 }

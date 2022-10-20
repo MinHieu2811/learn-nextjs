@@ -5,8 +5,8 @@ import { SWRConfig } from 'swr'
 import axiosClient from '@/api/axios-client'
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-
   const Layout = Component.Layout ?? EmptyLayout
+  
   return (
     <SWRConfig value={{ fetcher: (url) => axiosClient.get(url), shouldRetryOnError: false}}>
       <Layout>
