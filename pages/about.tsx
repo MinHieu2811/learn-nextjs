@@ -12,6 +12,7 @@ export default function AboutPage (props: AboutPageProps) {
   const router = useRouter()
 
   const page = router?.query?.page
+  console.log("🚀 ~ file: about.tsx ~ line 15 ~ AboutPage ~ page", page)
 
   React.useEffect(() => {
     if(!page) return 
