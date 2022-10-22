@@ -2,6 +2,7 @@ import Header from '@/component/common/header';
 import { MainLayout } from '@/component/layout';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import { Typography, Box } from '@mui/material'
 
 export interface AboutPageProps {
 }
@@ -35,8 +36,8 @@ export default function AboutPage (props: AboutPageProps) {
     { shallow: true})
   }
   return (
-    <div>
-      <h1>About us</h1>
+    <Box>
+      <Typography component='h1' variant='h3' color='primary.main'>About us</Typography>
 
       <Header />
 
@@ -47,7 +48,7 @@ export default function AboutPage (props: AboutPageProps) {
       </ul>
 
       <button onClick={handleNextClick}>Next</button>
-    </div>
+    </Box>
   );
 }
 
