@@ -1,4 +1,4 @@
-import Header from '@/component/common/header';
+import { Header } from '@/component/common/header';
 import { MainLayout } from '@/component/layout';
 import { useRouter } from 'next/router';
 import * as React from 'react';

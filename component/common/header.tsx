@@ -1,12 +1,13 @@
 import * as React from 'react';
+import { Box } from '@mui/material'
 
-export interface IAppProps {
+export interface HeaderProps {
 }
 
-export default function Header (props: IAppProps) {
+export function Header (props: HeaderProps) {
   return (
-    <div>
+    <Box component="header" textAlign="center">
       Header
-    </div>
+    </Box>
   );
 }
