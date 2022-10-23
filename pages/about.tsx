@@ -39,8 +39,6 @@ export default function AboutPage (props: AboutPageProps) {
     <Box>
       <Typography component='h1' variant='h3' color='primary.main'>About us</Typography>
 
-      <Header />
-
       <ul>
         {postList.map((post: any) => (
           <li key={post.id}>{post.title}</li>

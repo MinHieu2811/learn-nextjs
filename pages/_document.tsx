@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import { theme, createEmotionCache }from '@/utils/index'
+import { theme, createEmotionCache } from '@/utils/index'
 
 export default class MyDocument extends Document {
   render() {
@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet"></link>
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
         </Head>
@@ -25,7 +26,7 @@ export default class MyDocument extends Document {
       </Html>
     );
   }
-}  
+}
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
